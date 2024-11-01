@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #f5f5dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#welcome-screen, #game-screen {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.frame-container {
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  background-color: #3b3b3b;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: navy;
+  color: beige;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #add8e6;
+}
+
+#game-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 50px; 
+}
+
+#word-list, #choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#word-list {
+  align-items: flex-start;
+}
+
+#choice-list {
+  align-items: flex-end;
+}
+
+.word-item {
+  padding: 10px 20px;
+  border: 2px solid orange;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: orange;
+  color: navy;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.choice-item {
+  padding: 10px 20px;
+  border: 2px solid navy;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: beige;
+  color: navy;
+  font-size: 1em;
+}
+
+.word-item.selected, .choice-item.selected {
+  background-color: #1a8cff;
+  color: beige;
+}
+
+.word-item.correct, .choice-item.correct {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.word-item.incorrect, .choice-item.incorrect {
+  animation: flicker 0.5s linear infinite;
+}
+.thanks-container {
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(18, 182, 81);
+}
+
+.thanks-container h1 {
+  font-size: 2em;
+  color: #14e8dd;
+}
+
+.thanks-container p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+@keyframes flicker {
+  0%, 20%, 50%, 80%, 100% {
+    background-color: #f44336;
+  }
+  10%, 30%, 70%, 90% {
+    background-color: #2f2f2f;
+  }
+}

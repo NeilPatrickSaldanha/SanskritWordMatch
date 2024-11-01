@@ -1,0 +1,10 @@
+[
+  { "word": "सूर्यः", "meaning": "Sun", "definition": "The star at the center of our solar system", "sentence": "The ____ rises in the east." },
+  { "word": "नदी", "meaning": "River", "definition": "A large natural stream of water", "sentence": "The ____ flows through the valley." },
+  { "word": "गणेशः", "meaning": "Ganesha", "definition": "A Hindu deity with an elephant head", "sentence": "People worship ____ during festivals." },
+  { "word": "शक्ति", "meaning": "Power", "definition": "The ability or capacity to do something", "sentence": "Knowledge is ____." },
+  { "word": "विद्या", "meaning": "Knowledge", "definition": "Facts, information, and skills", "sentence": "____ is valuable in life." },
+  { "word": "प्रेम", "meaning": "Love", "definition": "A deep affection or care for someone", "sentence": "____ brings people together." },
+  { "word": "मित्रम्", "meaning": "Friend", "definition": "A person whom one knows and trusts", "sentence": "A true ____ is loyal." },
+  { "word": "धनम्", "meaning": "Wealth", "definition": "An abundance of valuable possessions", "sentence": "Good health is real ____." }
+]
