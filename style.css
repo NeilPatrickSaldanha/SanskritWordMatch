@@ -1,34 +1,112 @@
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #1e1e1e;
   color: #f5f5dc;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 0;
+  overflow: auto;
 }
 
-#welcome-screen, #game-screen {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.frame-container {
-  border: 2px solid #1a1a1a;
-  border-radius: 10px;
+/* Thank You Page Styles */
+.thanks-container {
+  width: 100%;
+  max-width: 800px;
   padding: 20px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   background-color: #3b3b3b;
-  width: 90%;
-  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.thanks-container h1 {
+  font-size: 2.5em;
+  color: orange; /* Heading matches the theme */
+  margin-bottom: 15px;
+}
+
+.thanks-container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.extra-message {
+  font-size: 1.1em;
+  color: #add8e6; /* Light blue for additional messages */
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
+}
+
+#button-container button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: navy;
+  color: beige;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#button-container button:hover {
+  background-color: orange;
+  color: navy;
+}
+
+.play-again-button {
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: navy;
+  color: beige;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.play-again-button:hover {
+  background-color: orange;
+  color: navy;
+}
+
+/* Shared Game Styles */
+#welcome-screen, #game-screen {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #3b3b3b;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: #f5f5dc;
+  text-align: center;
+}
+
+#welcome-screen h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#welcome-screen p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 1.2em;
+  font-size: 1em;
   cursor: pointer;
   background-color: navy;
   color: beige;
@@ -41,46 +119,76 @@ button:hover {
   background-color: #add8e6;
 }
 
+.frame-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#game-screen {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#top-container h1 {
+  font-size: 1.8em;
+}
+
+#level-indicator, #timer-container {
+  font-size: 1.2em;
+}
+
+/* Game Container */
 #game-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  gap: 50px; 
+  gap: 20px;
+  width: 100%;
+  overflow-y: scroll; /* Scroll only on the game container */
+  max-height: 75vh; /* Adjust height to fit the container */
 }
 
-#word-list, #choice-list {
+.list {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 45%;
 }
 
-#word-list {
-  align-items: flex-start;
-}
-
-#choice-list {
-  align-items: flex-end;
+.word-item, .choice-item {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
 }
 
 .word-item {
-  padding: 10px 20px;
-  border: 2px solid orange;
-  border-radius: 5px;
-  cursor: pointer;
   background-color: orange;
   color: navy;
-  font-size: 1em;
-  font-weight: bold;
+  border: 2px solid orange;
 }
 
 .choice-item {
-  padding: 10px 20px;
-  border: 2px solid navy;
-  border-radius: 5px;
-  cursor: pointer;
   background-color: beige;
   color: navy;
-  font-size: 1em;
+  border: 2px solid navy;
+}
+
+.word-item:hover, .choice-item:hover {
+  transform: scale(1.05);
 }
 
 .word-item.selected, .choice-item.selected {
@@ -91,32 +199,63 @@ button:hover {
 .word-item.correct, .choice-item.correct {
   background-color: #4CAF50;
   color: #fff;
+  animation: correctMatchAnimation 0.5s ease-in-out;
 }
 
 .word-item.incorrect, .choice-item.incorrect {
-  animation: flicker 0.5s linear infinite;
+  background-color: #f44336;
+  color: #fff;
 }
-.thanks-container {
+
+/* Image Resizing */
+.word-image, .choice-image {
+  max-width: 100px; /* Adjusted size */
+  max-height: 100px; /* Adjusted size */
+  display: block;
+  margin: 0 auto;
+}
+
+#level-completed-message {
   text-align: center;
-  margin-top: 50px;
-  color: rgb(18, 182, 81);
+  margin-top: 20px;
+  color: #12b651;
 }
 
-.thanks-container h1 {
-  font-size: 2em;
-  color: #14e8dd;
+#skip-level-button {
+  margin-top: 20px;
 }
 
-.thanks-container p {
-  font-size: 1.2em;
-  margin-top: 10px;
+/* Animation for correct match */
+@keyframes correctMatchAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-@keyframes flicker {
-  0%, 20%, 50%, 80%, 100% {
-    background-color: #f44336;
+/* Responsive Design */
+@media (max-width: 768px) {
+  #game-container {
+    flex-direction: row;
+    justify-content: space-around;
   }
-  10%, 30%, 70%, 90% {
-    background-color: #2f2f2f;
+  .list {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  #top-container h1 {
+    font-size: 1.5em;
+  }
+  #level-indicator, #timer-container {
+    font-size: 1em;
+  }
+  #game-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .list {
+    width: 100%;
   }
 }

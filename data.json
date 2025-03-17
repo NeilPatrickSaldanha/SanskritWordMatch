@@ -1,10 +1,51 @@
-[
-  { "word": "सूर्यः", "meaning": "Sun", "definition": "The star at the center of our solar system", "sentence": "The ____ rises in the east." },
-  { "word": "नदी", "meaning": "River", "definition": "A large natural stream of water", "sentence": "The ____ flows through the valley." },
-  { "word": "गणेशः", "meaning": "Ganesha", "definition": "A Hindu deity with an elephant head", "sentence": "People worship ____ during festivals." },
-  { "word": "शक्ति", "meaning": "Power", "definition": "The ability or capacity to do something", "sentence": "Knowledge is ____." },
-  { "word": "विद्या", "meaning": "Knowledge", "definition": "Facts, information, and skills", "sentence": "____ is valuable in life." },
-  { "word": "प्रेम", "meaning": "Love", "definition": "A deep affection or care for someone", "sentence": "____ brings people together." },
-  { "word": "मित्रम्", "meaning": "Friend", "definition": "A person whom one knows and trusts", "sentence": "A true ____ is loyal." },
-  { "word": "धनम्", "meaning": "Wealth", "definition": "An abundance of valuable possessions", "sentence": "Good health is real ____." }
-]
+{
+  "Animals": [
+    { "name": "सिंहः", "letters": ["सिं", "हः"], "image": "https://i.ibb.co/pyY54CB/lion.png", "sound": null },
+    { "name": "गजः", "letters": ["ग", "जः"], "image": "https://i.ibb.co/5YhwhX9/elephant.png", "sound": null },
+    { "name": "व्याघ्रः", "letters": ["व्या", "घ्रः"], "image": "https://i.ibb.co/TPZ5ShZ/tiger.png", "sound": null },
+    { "name": "कूर्मः", "letters": ["कू", "र्मः"], "image": "https://i.ibb.co/51z4nNz/tortoise.png", "sound": null },
+    { "name": "वराहः", "letters": ["व", "रा", "हः"], "image": "https://i.ibb.co/DW9mL1Q/boar.png", "sound": null }
+  ],
+  "Birds": [
+    { "name": "मयूरः", "letters": ["म", "यू", "रः"], "image": "https://i.ibb.co/9wHyrLc/mayUraH.png", "sound": null },
+    { "name": "हंसः", "letters": ["ह", "ं", "सः"], "image": "https://i.ibb.co/rZtjQkS/swan.png", "sound": null },
+    { "name": "चटकः", "letters": ["च", "ट", "कः"], "image": "https://i.ibb.co/WfX5GdK/sparrow.png", "sound": null },
+    { "name": "कपोतः", "letters": ["क", "पो", "तः"], "image": "https://i.ibb.co/N3rGjxm/kapotaH.png", "sound": null },
+    { "name": "कुक्कुटः", "letters": ["कु", "क्कु", "टः"], "image": "https://i.ibb.co/6mj6W0p/cock.png", "sound": null }
+  ],
+  "Vegetables": [
+    { "name": "आलुकम्", "letters": ["आ", "लु", "कम्"], "image": "https://i.ibb.co/X7Qn1Mh/aloo.png", "sound": null },
+    { "name": "वर्ताकी", "letters": ["वर्", "ता", "की"], "image": "https://i.ibb.co/vPDWB1H/eggplant.png", "sound": null },
+    { "name": "लशुनः", "letters": ["ल", "शु", "नः"], "image": "https://i.ibb.co/DRGp9FT/garlic.png", "sound": null },
+    { "name": "शल्कम्", "letters": ["श", "ल्क", "म्"], "image": "https://i.ibb.co/5YmzXmJ/onion.png", "sound": null },
+    { "name": "मूलिका", "letters": ["मू", "लि", "का"], "image": "https://i.ibb.co/G2kRQdF/radish.png", "sound": null }
+  ],
+  "Fruits": [
+    { "name": "आम्रम्", "letters": ["आ", "म्र", "म्"], "image": "https://i.ibb.co/k10TxmW/AmraM.png", "sound": null },
+    { "name": "द्राक्षा", "letters": ["द्रा", "क्षा"], "image": "https://i.ibb.co/pZGLxDW/drakshA.png", "sound": null },
+    { "name": "कदली", "letters": ["क", "द", "ली"], "image": "https://i.ibb.co/p2KsYm3/kadalI.png", "sound": null },
+    { "name": "नारङ्गम्", "letters": ["ना", "र", "ङ्ग", "म्"], "image": "https://i.ibb.co/hVF8wnR/nArangaM.png", "sound": null },
+    { "name": "बीजपूरम्", "letters": ["बी", "ज", "पू", "रम्"], "image": "https://i.ibb.co/KxRbDpM/pomegranate.png", "sound": null }
+  ],
+  "Directions": [
+    { "name": "पूर्वः", "letters": ["पू", "र्वः"], "image": "https://i.ibb.co/placeholder/east.png", "sound": null },
+    { "name": "पश्चिमः", "letters": ["प", "श्चि", "मः"], "image": "https://i.ibb.co/placeholder/west.png", "sound": null },
+    { "name": "उत्तरः", "letters": ["उ", "त्त", "रः"], "image": "https://i.ibb.co/placeholder/north.png", "sound": null },
+    { "name": "दक्षिणः", "letters": ["द", "क्षि", "णः"], "image": "https://i.ibb.co/placeholder/south.png", "sound": null },
+    { "name": "आग्नेयः", "letters": ["आ", "ग्न", "ये", "यः"], "image": "https://i.ibb.co/placeholder/southeast.png", "sound": null }
+  ],
+  "Shapes": [
+    { "name": "वृत्तम्", "letters": ["वृ", "त्त", "म्"], "image": "https://i.ibb.co/placeholder/circle.png", "sound": null },
+    { "name": "त्रिभुजम्", "letters": ["त्रि", "भु", "जम्"], "image": "https://i.ibb.co/placeholder/triangle.png", "sound": null },
+    { "name": "चतुरस्रम्", "letters": ["च", "तु", "र", "स्रम्"], "image": "https://i.ibb.co/placeholder/square.png", "sound": null },
+    { "name": "षट्कोणम्", "letters": ["षट्", "को", "णम्"], "image": "https://i.ibb.co/placeholder/hexagon.png", "sound": null },
+    { "name": "आयताकृतिः", "letters": ["आ", "य", "ता", "कृ", "तिः"], "image": "https://i.ibb.co/placeholder/rectangle.png", "sound": null }
+  ],
+  "Electronics": [
+    { "name": "दूरदर्शनम्", "letters": ["दू", "र", "द", "र्श", "नम्"], "image": "https://i.ibb.co/placeholder/tv.png", "sound": null },
+    { "name": "गणकयन्त्रः", "letters": ["ग", "ण", "क", "य", "न्त्रः"], "image": "https://i.ibb.co/placeholder/computer.png", "sound": null },
+    { "name": "विद्युत्-दीपः", "letters": ["वि", "द्युत्", "दी", "पः"], "image": "https://i.ibb.co/placeholder/lamp.png", "sound": null },
+    { "name": "ध्वनिवर्धकः", "letters": ["ध्व", "नि", "व", "र्ध", "कः"], "image": "https://i.ibb.co/placeholder/speaker.png", "sound": null },
+    { "name": "चलवाणी", "letters": ["च", "ल", "वा", "णी"], "image": "https://i.ibb.co/placeholder/mobile.png", "sound": null }
+  ]
+}

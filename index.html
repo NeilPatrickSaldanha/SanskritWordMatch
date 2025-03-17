@@ -7,22 +7,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Welcome Screen -->
   <div id="welcome-screen">
     <h1>Welcome to the Word Match Game</h1>
-    <p>Match Sanskrit words with their corresponding English words, meanings, and images!</p>
+    <p>Match Sanskrit words with their corresponding images!</p>
     <button id="start-game">Start Game</button>
   </div>
 
+  <!-- Game Screen -->
   <div id="game-screen" style="display: none;">
     <div class="frame-container">
       <h1>Word Match Game</h1>
       <div id="level-indicator">Level 1</div>
       <div id="timer-container">Time left: <span id="timer">120</span> seconds</div>
       <div id="game-container">
-        <div id="word-list" class="list"></div>
-        <div id="choice-list" class="list"></div>
+        <!-- Left side: Words -->
+        <div id="word-list" class="list panel"></div>
+        <!-- Right side: Images -->
+        <div id="choice-list" class="list panel"></div>
       </div>
-      <button id="skip-button">Skip Level</button> <!-- Skip button added -->
+      <div class="button-container">
+        <button id="skip-button">Skip Level</button>
+        <button id="end-game-button">End Game</button>
+      </div>
     </div>
   </div>
 
